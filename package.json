@@ -1,0 +1,30 @@
+{
+  "name": "catalyst-wealth-partners-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "live-server --port=3000 --open=/index.html",
+    "sass": "sass scss/style.scss css/style.css --watch",
+    "build": "sass scss/style.scss css/style.css --style=compressed",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlanSyncAI/Catalyst-Wealth-Partners-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PlanSyncAI/Catalyst-Wealth-Partners-Website/issues"
+  },
+  "homepage": "https://github.com/PlanSyncAI/Catalyst-Wealth-Partners-Website#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.10",
+    "sass": "^1.89.2"
+  }
+}
