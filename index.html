@@ -106,6 +106,144 @@
       display: flex;
       flex-direction: column;
     }
+    
+    /* Enhanced Pricing Section Styles */
+    .pricing-section {
+      background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+      padding: 100px 0;
+    }
+    
+    .pricing-card {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      height: 100%;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+    
+    .pricing-card.featured {
+      border: 2px solid #46CDCF;
+      transform: scale(1.05);
+    }
+    
+    .pricing-card.featured:hover {
+      transform: scale(1.05) translateY(-10px);
+    }
+    
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .pricing-header h3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 20px;
+    }
+    
+    .pricing-card.featured .pricing-header h3 {
+      color: #46CDCF;
+    }
+    
+    .price-tag {
+      font-size: 48px;
+      font-weight: 300;
+      color: #46CDCF;
+      margin-bottom: 15px;
+      display: block;
+    }
+    
+    .price-description {
+      font-size: 16px;
+      color: #6c757d;
+      line-height: 1.6;
+    }
+    
+    .pricing-features {
+      margin-bottom: 40px;
+    }
+    
+    .pricing-features li {
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f3f5;
+      color: #495057;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .pricing-features li:before {
+      content: "✓";
+      color: #46CDCF;
+      font-weight: bold;
+      margin-right: 15px;
+      font-size: 18px;
+    }
+    
+    .pricing-cta {
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .pricing-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 2px solid #46CDCF;
+      color: #46CDCF;
+      background: transparent;
+    }
+    
+    .pricing-btn:hover {
+      background: #46CDCF;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(70, 205, 207, 0.3);
+      text-decoration: none;
+    }
+    
+    .pricing-card.featured .pricing-btn {
+      background: #46CDCF;
+      color: white;
+    }
+    
+    .pricing-card.featured .pricing-btn:hover {
+      background: #3ab8ba;
+      border-color: #3ab8ba;
+    }
+    
+    .featured-badge {
+      position: absolute;
+      top: -15px;
+      right: 30px;
+      background: #46CDCF;
+      color: white;
+      padding: 8px 25px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
   </style>
 </head>
 <body>
@@ -408,82 +546,77 @@
       </div>
     </div> -->
 
-     <div class="site-section bg-light">
+     <div class="pricing-section">
       <div class="container">
         <div class="row justify-content-center" data-aos="fade-up">
-          <div class="col-lg-8 text-center heading-section mb-5">
+          <div class="col-lg-8 text-center mb-5">
             <h2 class="mb-4 font-weight-bold">Curious About Your Valuation? It's Free!</h2>
-            <p class="mb-5">Most advisors don't know what their business is worth. That's where we come in. We'll provide a confidential valuation range and market benchmarking—no strings attached.</p>
+            <p class="mb-5 text-muted">Most advisors don't know what their business is worth. That's where we come in. We'll provide a confidential valuation range and market benchmarking—no strings attached.</p>
           </div>
         </div>
-        <div class="row no-gutters">
-          <div class="col-12 col-sm-6 col-md-6 col-lg-4 bg-white p-3 p-md-5" data-aos="fade-up" data-aos-delay="">
-            
-
-            <div class="pricing">
-              <h3 class="text-center text-black mb-3">Practice Valuation</h3>
-              <div class="price text-center mb-4 ">
-                <span class="display-3 font-weight-light">Free</span>
-                <p class="text-center mb-4 text-muted">Confidential assessment of your practice's current market value</p>
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="">
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Practice Valuation</h3>
+                <span class="price-tag">FREE</span>
+                <p class="price-description">Confidential assessment of your practice's current market value</p>
               </div>
-              <ul class="list-unstyled ul-check success mb-5">
+              <ul class="list-unstyled pricing-features">
                 <li>Confidential Valuation Analysis</li>
                 <li>Market Benchmarking Report</li>
                 <li>Strategic Recommendations</li>
                 <li>No Obligation Discussion</li>
                 <li>Complete Discretion Guaranteed</li>
-
               </ul>
-              <p class="text-center">
-                <a href="#contact-section" class="btn btn-block btn-primary">Unlock Your Practice Valuation</a>
-              </p>
-            </div>
-
-          </div>
-          <div class="col-12 col-sm-6 col-md-6 col-lg-4 bg-primary pro  p-3 p-md-5" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing">
-              <h3 class="text-center text-white mb-3">Strategic Consultation</h3>
-              
-              <div class="price text-center mb-4 ">
-                <span class="display-3 font-weight-light text-white">Free</span>
-                <p class="text-center mb-4 text-white">Comprehensive strategic guidance for your transition journey</p>
-
+              <div class="pricing-cta">
+                <a href="/contact.html" class="pricing-btn">Unlock Your Practice Valuation</a>
               </div>
-              <ul class="list-unstyled ul-check success mb-5">
-                
+            </div>
+          </div>
+          
+          <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-card featured">
+              <span class="featured-badge">Most Popular</span>
+              <div class="pricing-header">
+                <h3>Strategic Consultation</h3>
+                <span class="price-tag">FREE</span>
+                <p class="price-description">Comprehensive strategic guidance for your transition journey</p>
+              </div>
+              <ul class="list-unstyled pricing-features">
                 <li>Transition Strategy Development</li>
                 <li>Market Opportunity Assessment</li>
                 <li>Deal Structure Guidance</li>
                 <li>Timeline & Process Planning</li>
                 <li>Ongoing Advisory Support</li>
               </ul>
-              <p class="text-center">
-                <a href="#contact-section" class="btn btn-block btn-white">Start the Conversation</a>
-              </p>
+              <div class="pricing-cta">
+                <a href="/contact.html" class="pricing-btn">Start the Conversation</a>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-6 col-lg-4 bg-white  p-3 p-md-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing">
-              <h3 class="text-center mb-3">Full-Service Advisory</h3>
-              <div class="price text-center mb-4 ">
-                <span class="display-3 font-weight-light">Free</span>
-                <p class="text-center mb-4 text-muted">End-to-end support throughout your entire transition process</p>
-
+          
+          <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Full-Service Advisory</h3>
+                <span class="price-tag">FREE</span>
+                <p class="price-description">End-to-end support throughout your entire transition process</p>
               </div>
-              <ul class="list-unstyled ul-check success mb-5">
-                
+              <ul class="list-unstyled pricing-features">
                 <li>Complete Transaction Management</li>
                 <li>Negotiation Support</li>
                 <li>Due Diligence Coordination</li>
                 <li>Legal & Financial Guidance</li>
                 <li>Post-Transition Support</li>
               </ul>
-              <p class="text-center">
-                <a href="#contact-section" class="btn btn-block btn-primary">Explore Full Service</a>
-              </p>
+              <div class="pricing-cta">
+                <a href="/contact.html" class="pricing-btn">Explore Full Service</a>
+              </div>
             </div>
           </div>
         </div>
+        
         <div class="row justify-content-center mt-5">
           <div class="col-lg-8 text-center">
             <p class="text-muted" data-aos="fade-up">We are completely free and only benefit from helping advisors benefit. We are completely on the advisor's side—no hidden fees, no surprises.</p>
