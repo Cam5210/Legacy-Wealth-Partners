@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta name="description" content="Succession Point helps elite Financial Advisors maximize their enterprise valuations to fit their ideal practice structure and time horizon." />
+  <meta name="keywords" content="financial advisor, succession planning, practice valuation, enterprise value" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <title>Succession Point - Building Generational Wealth</title>
+  <style>
+    /* Navigation styling for dark hero background */
+    .site-nav .site-menu a {
+      color: white;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .site-nav .site-menu a:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .site-nav .site-menu a:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #46CDCF;
+      transition: width 0.3s ease;
+    }
+    
+    .site-nav .site-menu a:hover:after,
+    .site-nav .site-menu .active a:after {
+      width: 100%;
+    }
+    
+    .site-nav .site-menu .active a {
+      color: white;
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #2d3436 0%, #1a1a1a 100%);
+      padding: 120px 0 80px;
+      color: white;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-section .lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 30px;
+    }
+
+    .hero-highlight {
+      color: #46CDCF;
+      font-weight: 600;
+    }
+
+    /* Revenue Multiple Badge */
+    .revenue-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #46CDCF 0%, #3ab8ba 100%);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 20px 0;
+      box-shadow: 0 10px 30px rgba(70, 205, 207, 0.3);
+    }
+
+    /* Offering Cards */
+    .offering-card {
+      background: white;
+      border-radius: 15px;
+      padding: 40px 30px;
+      height: 100%;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offering-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      border-color: #46CDCF;
+    }
+
+    .offering-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #46CDCF 0%, #3ab8ba 100%);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .offering-card:hover::before {
+      transform: translateX(0);
+    }
+
+    .offering-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .offering-card:hover .offering-icon {
+      background: linear-gradient(135deg, #46CDCF 0%, #3ab8ba 100%);
+    }
+
+    .offering-icon i {
+      font-size: 30px;
+      color: #46CDCF;
+      transition: all 0.3s ease;
+    }
+
+    .offering-card:hover .offering-icon i {
+      color: white;
+    }
+
+    .offering-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 15px;
+    }
+
+    .offering-card p {
+      color: #6c757d;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #46CDCF 0%, #3ab8ba 100%);
+      padding: 80px 0;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: pulse 15s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: white;
+      color: #46CDCF;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      color: #3ab8ba;
+      text-decoration: none;
+    }
+
+    /* Feature List */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+    }
+
+    .feature-list li {
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      font-size: 1.1rem;
+      color: #495057;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: #46CDCF;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-right: 15px;
+    }
+
+    /* Value Proposition Section */
+    .value-prop {
+      background: #f8f9fa;
+      padding: 80px 0;
+    }
+
+    .value-prop-card {
+      text-align: center;
+      padding: 40px;
+    }
+
+    .value-prop-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #46CDCF;
+      margin-bottom: 10px;
+    }
+
+    .value-prop-text {
+      font-size: 1.2rem;
+      color: #2d3436;
+      font-weight: 600;
+    }
+
+    /* No PE Badge */
+    .no-pe-badge {
+      display: inline-flex;
+      align-items: center;
+      background: #dc3545;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .no-pe-badge i {
+      margin-right: 8px;
+    }
+
+    /* Enhanced Pricing Section Styles */
+    .pricing-section {
+      background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+      padding: 100px 0;
+    }
+    
+    .pricing-card {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      height: 100%;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+    
+    .pricing-card.featured {
+      border: 2px solid #46CDCF;
+      transform: scale(1.05);
+    }
+    
+    .pricing-card.featured:hover {
+      transform: scale(1.05) translateY(-10px);
+    }
+    
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .pricing-header h3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 20px;
+    }
+    
+    .pricing-card.featured .pricing-header h3 {
+      color: #46CDCF;
+    }
+    
+    .price-tag {
+      font-size: 48px;
+      font-weight: 300;
+      color: #46CDCF;
+      margin-bottom: 15px;
+      display: block;
+    }
+    
+    .price-description {
+      font-size: 16px;
+      color: #6c757d;
+      line-height: 1.6;
+    }
+    
+    .pricing-features {
+      margin-bottom: 40px;
+    }
+    
+    .pricing-features li {
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f3f5;
+      color: #495057;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .pricing-features li:before {
+      content: "✓";
+      color: #46CDCF;
+      font-weight: bold;
+      margin-right: 15px;
+      font-size: 18px;
+    }
+    
+    .pricing-cta {
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .pricing-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 2px solid #46CDCF;
+      color: #46CDCF;
+      background: transparent;
+    }
+    
+    .pricing-btn:hover {
+      background: #46CDCF;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(70, 205, 207, 0.3);
+      text-decoration: none;
+    }
+    
+    .pricing-card.featured .pricing-btn {
+      background: #46CDCF;
+      color: white;
+    }
+    
+    .pricing-card.featured .pricing-btn:hover {
+      background: #3ab8ba;
+      border-color: #3ab8ba;
+    }
+    
+    .featured-badge {
+      position: absolute;
+      top: -15px;
+      right: 30px;
+      background: #46CDCF;
+      color: white;
+      padding: 8px 25px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Why We're Unique Section */
+    .unique-section {
+      background: linear-gradient(135deg, #2d3436 0%, #373c44 100%);
+      padding: 100px 0;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .unique-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%2346CDCF" opacity="0.1"/><circle cx="80" cy="80" r="3" fill="%2346CDCF" opacity="0.05"/><circle cx="60" cy="30" r="1" fill="%2346CDCF" opacity="0.1"/></svg>');
+      background-size: 200px 200px;
+    }
+
+    .complexity-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(70, 205, 207, 0.2);
+      border-radius: 15px;
+      padding: 30px;
+      height: 100%;
+      transition: all 0.3s ease;
+      position: relative;
+      backdrop-filter: blur(10px);
+    }
+
+    .complexity-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(70, 205, 207, 0.4);
+      transform: translateY(-5px);
+    }
+
+    .complexity-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #46CDCF 0%, #3ab8ba 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .complexity-icon i {
+      font-size: 24px;
+      color: white;
+    }
+
+    .stat-highlight {
+      background: linear-gradient(135deg, rgba(70, 205, 207, 0.2), rgba(58, 184, 186, 0.1));
+      border: 1px solid rgba(70, 205, 207, 0.3);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #46CDCF;
+      display: block;
+    }
+
+    .stat-text {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 5px;
+    }
+
+    .warning-callout {
+      background: linear-gradient(135deg, rgba(220, 53, 69, 0.15), rgba(220, 53, 69, 0.05));
+      border: 1px solid rgba(220, 53, 69, 0.3);
+      border-radius: 10px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+
+    .warning-callout h5 {
+      color: #ff6b7a;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .warning-callout p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+  
+  <div class="container">
+    <nav class="site-nav">
+      <div class="logo">
+        <a href="index.html"><img src="images/LegacyWealthPartnersLogo.png" alt="Legacy Wealth Recruiting" style="width: 150px;"></a>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
+          <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
+            <li><a href="insights.html">Industry Insights</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="offering.html">Offering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+            <span></span>
+          </a>
+        </div>
+      </div>  
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto text-center text-white">
+          <h1 data-aos="fade-up" class="text-white">Building Generational Wealth</h1>
+          <p class="lead" data-aos="fade-up" data-aos-delay="100">
+            There's never been a more exciting time to capture <span class="hero-highlight">EXTRAORDINARY</span> revenue multiples, 
+            access growth accelerators and leverage operational efficiencies.
+          </p>
+          <div class="revenue-badge" data-aos="fade-up" data-aos-delay="200">
+            5-17x Top Line Revenue Multiples
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="site-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h2 class="font-weight-bold mb-4" data-aos="fade-up">IT'S ALL ABOUT YOU.</h2>
+          <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+            Succession Point helps elite Financial Advisors maximize their enterprise valuations 
+            to fit their ideal practice structure and time horizon.
+          </p>
+        </div>
+      </div>
+
+      <!-- Offerings Grid -->
+      <div class="row mb-5">
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="offering-card">
+            <div class="offering-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Flexible Monetization</h3>
+            <p>Monetize a fraction or your entire practice while maintaining control. Continue advising on your terms or transition to retirement seamlessly.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="offering-card">
+            <div class="offering-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Growth Capital</h3>
+            <p>Access capital for strategic acquisitions and gain enterprise-level scale and pricing to accelerate your practice growth.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="offering-card">
+            <div class="offering-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Family Office Resources</h3>
+            <p>Leverage high-net-worth family office resources and gain access to exclusive alternatives and private deals.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="offering-card">
+            <div class="offering-icon">
+              <i class="fas fa-fingerprint"></i>
+            </div>
+            <h3>Retain Your Identity</h3>
+            <p>Keep your branding, models, and methods intact. Your practice remains uniquely yours while benefiting from enhanced resources.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="offering-card">
+            <div class="offering-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Succession Planning</h3>
+            <p>Implement G2 advisor strategies for optimal client retention and practice longevity, ensuring smooth transitions.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="offering-card">
+            <div class="offering-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>True Independence</h3>
+            <p>No Private Equity ownership means you maintain true independence while accessing institutional-level resources and support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Value Proposition Section -->
+  <div class="value-prop">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="value-prop-card">
+            <div class="value-prop-number">5-17x</div>
+            <div class="value-prop-text">Revenue Multiples</div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-prop-card">
+            <div class="value-prop-number">100%</div>
+            <div class="value-prop-text">Control Retained</div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-prop-card">
+            <div class="value-prop-number">0%</div>
+            <div class="value-prop-text">Private Equity Ownership</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customized Offerings Section -->
+  <div class="site-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up">
+          <h2 class="font-weight-bold mb-4">Customized Offerings and Partnerships</h2>
+          <p class="lead mb-4">
+            Every advisor's journey is unique. That's why we offer flexible partnership structures 
+            designed to meet your specific goals and timeline.
+          </p>
+          <ul class="feature-list">
+            <li>Monetize fraction or entire practice</li>
+            <li>Continue advising or retire on your timeline</li>
+            <li>5-17x top line revenue multiples</li>
+            <li>Capital for strategic acquisitions</li>
+            <li>Enterprise-level scale and pricing</li>
+            <li>HNW family office resources</li>
+            <li>Retain your branding and methods</li>
+            <li>G2 advisor succession strategies</li>
+            <li>Access to alternatives and private deals</li>
+          </ul>
+          <div class="no-pe-badge">
+            <i class="fas fa-ban"></i>
+            No Private Equity Ownership
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/img_v_2.jpg" alt="Succession Point Partnership" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why We're Unique Section -->
+  <div class="unique-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10 text-center">
+          <h2 class="mb-4 font-weight-bold text-white" data-aos="fade-up" style="font-size: 2.5rem;">Why Legacy Wealth Recruiting is Unique</h2>
+          <p class="lead mb-0 text-white" data-aos="fade-up" data-aos-delay="100" style="opacity: 0.9; font-size: 1.2rem;">Every deal is extraordinarily complex, highly confidential, and requires institutional-level expertise. Here's why most advisors need expert guidance to navigate successfully.</p>
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="complexity-card">
+            <div class="complexity-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4 class="mb-3 text-white">Deal Complexity & Confidentiality</h4>
+            <p class="text-white" style="opacity: 0.9;">Each transaction involves dozens of nuanced steps that most people don't understand. The process is highly confidential and requires someone who has completed 20+ transactions in the last year alone—not a generalized approach.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="complexity-card">
+            <div class="complexity-icon">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <h4 class="mb-3 text-white">Qualified Buyer-Seller Matching</h4>
+            <p class="text-white" style="opacity: 0.9;">Not all buyers are qualified, and not all sellers are qualified. This isn't a Craigslist listing—it requires someone who is a high-level player that understands the quality of buyers and sellers to pull it off successfully.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="complexity-card">
+            <div class="complexity-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h4 class="mb-3 text-white">Rapidly Changing Landscape</h4>
+            <p class="text-white" style="opacity: 0.9;">The landscape is changing so fast and deal structures are evolving constantly—it's really hard to keep up. You need expertise, bandwidth, and market intelligence to make it all work effectively.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+          <h3 class="mb-4 text-white font-weight-bold">Higher Qualification Standards</h3>
+          <p class="text-white mb-4" style="opacity: 0.9; font-size: 1.1rem;">We take a much higher qualification process than the average M&A firm. A lot of traditional approaches just waste an advisor's time if they're not working with the correct firm that truly understands the space.</p>
+          
+          <div class="warning-callout">
+            <h5><i class="fas fa-exclamation-triangle mr-2"></i>The Cost of Going It Alone</h5>
+            <p>It's a waste of your time trying to run down all of this on your own when you don't understand the space. Most advisors who attempt solo navigation end up leaving significant money on the table or getting stuck in problematic deal structures.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-highlight">
+            <span class="stat-number">20+</span>
+            <div class="stat-text">Transactions Completed Last Year</div>
+          </div>
+          
+          <div class="stat-highlight">
+            <span class="stat-number">100%</span>
+            <div class="stat-text">Free to Advisors</div>
+          </div>
+          
+          <div class="stat-highlight">
+            <span class="stat-number">30+</span>
+            <div class="stat-text">Years Combined Experience</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="text-center p-5" style="background: rgba(70, 205, 207, 0.1); border: 1px solid rgba(70, 205, 207, 0.3); border-radius: 15px;" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="mb-4 text-white font-weight-bold">The Legacy Wealth Recruiting Advantage</h4>
+            <p class="text-white mb-4" style="opacity: 0.9; font-size: 1.1rem;">We have the money, bandwidth, and expertise to make complex transactions actually work. Plus, we're completely free to the advisor because our success depends entirely on your success.</p>
+            <p class="text-white mb-0" style="opacity: 0.9;"><strong>Bottom line:</strong> This requires institutional-level expertise. Don't navigate the most important financial decision of your career alone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="pricing-section">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-8 text-center mb-5">
+          <h2 class="mb-4 font-weight-bold">We're On Your Side - Completely Free</h2>
+          <p class="mb-5 text-muted">Unlike traditional brokers or recruiters, we don't get paid unless you succeed. Our expertise is provided at no cost because we believe advisors deserve transparent, pressure-free guidance when making the most important decisions of their careers.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing-card featured">
+            <span class="featured-badge">Our Promise</span>
+            <div class="pricing-header">
+              <h3>Strategic Consultation</h3>
+              <span class="price-tag">FREE</span>
+              <p class="price-description">Comprehensive guidance with complete transparency and no hidden agendas</p>
+            </div>
+            <ul class="list-unstyled pricing-features">
+              <li>Practice Valuation & Market Analysis</li>
+              <li>Transition Strategy Development</li>
+              <li>Deal Structure Optimization</li>
+              <li>Timeline & Process Planning</li>
+              <li>Ongoing Advisory Support</li>
+              <li>Complete Confidentiality Guaranteed</li>
+              <li>No Pressure, No Obligations</li>
+              <li>Advisor-First Philosophy</li>
+            </ul>
+            <div class="pricing-cta">
+              <a href="contact.html" class="pricing-btn">Start the Conversation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-10 text-center">
+          <div class="p-4 rounded" style="background: rgba(70, 205, 207, 0.1); border: 1px solid rgba(70, 205, 207, 0.3);">
+            <h5 class="mb-3" style="color: #2d3436; font-weight: 600;">Why We Work For Free</h5>
+            <p class="mb-0 text-muted" data-aos="fade-up">We only succeed when you do. Our business model aligns our interests with yours—we provide expert guidance at no cost because we believe every advisor deserves access to institutional-level expertise when navigating practice transitions. No hidden fees, no surprises, just results.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="cta-section">
+    <div class="container">
+      <div class="row justify-content-center text-center position-relative">
+        <div class="col-lg-8">
+          <h2 data-aos="fade-up" class="text-white">Ready to Maximize Your Practice Value?</h2>
+          <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
+            Discover how we can help you build generational wealth while maintaining 
+            control of your practice and your future.
+          </p>
+          <a href="contact.html" class="cta-btn" data-aos="fade-up" data-aos-delay="200">
+            Start Your Journey Today
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="site-footer">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-4">
+          <div class="widget">
+            <h3>About</h3>
+            <p>Succession Point helps elite Financial Advisors maximize their enterprise valuations through customized partnerships and strategic guidance.</p>
+          </div>
+          <div class="widget">
+            <h3>Connect with us</h3>
+            <ul class="social list-unstyled">
+              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-12">
+              <div class="widget">
+                <h3>Navigations</h3>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <li><a href="insights.html">Industry Insights</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="our-services.html">Our Services</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-center copyright">
+        <div class="col-md-8">
+          <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/imagesloaded.pkgd.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+</html>
