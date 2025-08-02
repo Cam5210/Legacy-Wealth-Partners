@@ -288,6 +288,144 @@
     .no-pe-badge i {
       margin-right: 8px;
     }
+
+    /* Enhanced Pricing Section Styles */
+    .pricing-section {
+      background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+      padding: 100px 0;
+    }
+    
+    .pricing-card {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      height: 100%;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+    
+    .pricing-card.featured {
+      border: 2px solid #46CDCF;
+      transform: scale(1.05);
+    }
+    
+    .pricing-card.featured:hover {
+      transform: scale(1.05) translateY(-10px);
+    }
+    
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .pricing-header h3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 20px;
+    }
+    
+    .pricing-card.featured .pricing-header h3 {
+      color: #46CDCF;
+    }
+    
+    .price-tag {
+      font-size: 48px;
+      font-weight: 300;
+      color: #46CDCF;
+      margin-bottom: 15px;
+      display: block;
+    }
+    
+    .price-description {
+      font-size: 16px;
+      color: #6c757d;
+      line-height: 1.6;
+    }
+    
+    .pricing-features {
+      margin-bottom: 40px;
+    }
+    
+    .pricing-features li {
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f3f5;
+      color: #495057;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .pricing-features li:before {
+      content: "✓";
+      color: #46CDCF;
+      font-weight: bold;
+      margin-right: 15px;
+      font-size: 18px;
+    }
+    
+    .pricing-cta {
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .pricing-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 2px solid #46CDCF;
+      color: #46CDCF;
+      background: transparent;
+    }
+    
+    .pricing-btn:hover {
+      background: #46CDCF;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(70, 205, 207, 0.3);
+      text-decoration: none;
+    }
+    
+    .pricing-card.featured .pricing-btn {
+      background: #46CDCF;
+      color: white;
+    }
+    
+    .pricing-card.featured .pricing-btn:hover {
+      background: #3ab8ba;
+      border-color: #3ab8ba;
+    }
+    
+    .featured-badge {
+      position: absolute;
+      top: -15px;
+      right: 30px;
+      background: #46CDCF;
+      color: white;
+      padding: 8px 25px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
   </style>
 </head>
 <body>
@@ -478,6 +616,52 @@
     </div>
   </div>
 
+  <!-- Pricing Section -->
+  <div class="pricing-section">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-8 text-center mb-5">
+          <h2 class="mb-4 font-weight-bold">We're On Your Side - Completely Free</h2>
+          <p class="mb-5 text-muted">Unlike traditional brokers or recruiters, we don't get paid unless you succeed. Our expertise is provided at no cost because we believe advisors deserve transparent, pressure-free guidance when making the most important decisions of their careers.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing-card featured">
+            <span class="featured-badge">Our Promise</span>
+            <div class="pricing-header">
+              <h3>Strategic Consultation</h3>
+              <span class="price-tag">FREE</span>
+              <p class="price-description">Comprehensive guidance with complete transparency and no hidden agendas</p>
+            </div>
+            <ul class="list-unstyled pricing-features">
+              <li>Practice Valuation & Market Analysis</li>
+              <li>Transition Strategy Development</li>
+              <li>Deal Structure Optimization</li>
+              <li>Timeline & Process Planning</li>
+              <li>Ongoing Advisory Support</li>
+              <li>Complete Confidentiality Guaranteed</li>
+              <li>No Pressure, No Obligations</li>
+              <li>Advisor-First Philosophy</li>
+            </ul>
+            <div class="pricing-cta">
+              <a href="contact.html" class="pricing-btn">Start the Conversation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-10 text-center">
+          <div class="p-4 rounded" style="background: rgba(70, 205, 207, 0.1); border: 1px solid rgba(70, 205, 207, 0.3);">
+            <h5 class="mb-3" style="color: #2d3436; font-weight: 600;">Why We Work For Free</h5>
+            <p class="mb-0 text-muted" data-aos="fade-up">We only succeed when you do. Our business model aligns our interests with yours—we provide expert guidance at no cost because we believe every advisor deserves access to institutional-level expertise when navigating practice transitions. No hidden fees, no surprises, just results.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- CTA Section -->
   <div class="cta-section">
     <div class="container">
@@ -485,7 +669,7 @@
         <div class="col-lg-8">
           <h2 data-aos="fade-up" class="text-white">Ready to Maximize Your Practice Value?</h2>
           <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
-            Discover how Succession Point can help you build generational wealth while maintaining 
+            Discover how we can help you build generational wealth while maintaining 
             control of your practice and your future.
           </p>
           <a href="contact.html" class="cta-btn" data-aos="fade-up" data-aos-delay="200">
